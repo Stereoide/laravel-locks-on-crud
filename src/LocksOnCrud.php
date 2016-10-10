@@ -45,7 +45,6 @@ trait LocksOnCrud
             /* Acquire write lock */
 
             $model->automaticLockIds = $locking->acquireWriteLock($model->id);
-            sleep(10);
         });
 
         static::updated(function ($model) {
